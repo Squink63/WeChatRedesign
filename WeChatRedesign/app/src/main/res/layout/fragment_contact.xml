@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ContactFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/margin_medium_2">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contacts"
+                android:textSize="@dimen/text_heading_2x"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/we_chat_font"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnAddContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="@color/colorAccent"
+                app:cardCornerRadius="@dimen/margin_medium_10">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnAddContactImage"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/icon_contact"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="@dimen/margin_medium_10"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/edtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appBar"
+        android:background="@color/pale"
+        app:queryHint="Search"
+        app:closeIcon="@drawable/close"
+        android:layout_marginHorizontal="@dimen/margin_medium_12"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:visibility="visible"
+        app:iconifiedByDefault="false"
+        app:queryBackground="@android:color/transparent"
+        android:layout_marginBottom="@dimen/margin_medium"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:background="@color/ww"
+        android:layout_below="@id/edtSearch">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Groups"
+                android:textSize="@dimen/text_regular_2x"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/margin_medium"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnAddNewGroup"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/frame_add_group"
+                android:layout_below="@id/tvGroup"
+                android:layout_alignStart="@id/tvGroup"
+                android:layout_marginTop="@dimen/margin_medium_2"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvGroupList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvGroup"
+                android:layout_toEndOf="@id/btnAddNewGroup"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium"/>
+
+            <include
+                android:id="@+id/vpContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                layout="@layout/view_pod_contact"
+                android:layout_below="@id/btnAddNewGroup"
+                android:layout_marginBottom="@dimen/margin_large"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_large_100"
+                android:layout_below="@id/vpContact"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlEmptyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtSearch"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivEmptyView"
+            android:layout_width="@dimen/dimen_large_200"
+            android:layout_height="@dimen/dimen_large_200"
+            android:src="@drawable/empty_view" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_below="@id/ivEmptyView"
+            android:id="@+id/tvNoContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No contact or group with name"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="@dimen/margin_medium_2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_medium"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEmptySearchName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" ``Aung Aung`` "
+            android:textColor="@color/colorAccent"
+            android:layout_marginStart="@dimen/margin_xxlarge"
+            android:layout_below="@id/tvNoContact"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_toEndOf="@id/tvEmptySearchName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvNoContact"
+            android:text="exits"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginStart="@dimen/margin_medium"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

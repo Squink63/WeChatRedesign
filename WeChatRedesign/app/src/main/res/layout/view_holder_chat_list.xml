@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/backgroung_chat_list"
+    android:padding="@dimen/margin_medium"
+    android:layout_marginBottom="@dimen/margin_card_medium">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/ivProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="35dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivChatListPorfile"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:srcCompat="@drawable/image2"
+            android:scaleType="centerCrop"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvProfileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aung Thant Kyaw"
+        android:textColor="@color/colorAccent"
+        android:layout_toEndOf="@id/ivProfile"
+        android:textSize="@dimen/text_regular_2x"
+        android:layout_margin="@dimen/margin_medium"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvChatDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You sent a Message"
+        android:layout_alignStart="@id/tvProfileName"
+        android:layout_below="@id/tvProfileName"
+        android:textSize="@dimen/text_regular"
+        android:layout_marginStart="@dimen/margin_small"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/margin_medium_3"
+        android:layout_height="@dimen/margin_medium_3"
+        app:srcCompat="@drawable/icon_seen"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@id/tvChatDescription"/>
+
+</RelativeLayout>

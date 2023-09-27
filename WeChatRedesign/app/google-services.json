@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "775634708096",
+    "firebase_url": "https://wechat-redesign-b90ca-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "wechat-redesign-b90ca",
+    "storage_bucket": "wechat-redesign-b90ca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:775634708096:android:b930576d1f5f46be25a865",
+        "android_client_info": {
+          "package_name": "com.padcmyanmar.abbc.wechatredesign"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "775634708096-ksv6lql6cbe51pgjcp826tikdagv6dbk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPx682rfWaa2gMIFwG2rJh1Kf1v2rkWz4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "775634708096-ksv6lql6cbe51pgjcp826tikdagv6dbk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

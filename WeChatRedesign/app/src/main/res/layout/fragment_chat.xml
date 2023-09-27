@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ChatFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/margin_medium_2">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvChatHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chats"
+                android:textSize="@dimen/text_heading_2x"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/we_chat_font"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="@color/colorAccent"
+                app:cardCornerRadius="@dimen/margin_medium_10">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/icon_search"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="@dimen/margin_medium_10"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:background="@color/ww">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvActiveNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active Now"
+                android:textSize="@dimen/text_regular_2x"
+                android:layout_marginStart="@dimen/margin_medium_3"
+                android:layout_marginTop="@dimen/margin_medium"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvActiveNow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvActiveNow"
+                android:elevation="@dimen/margin_medium"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvChatList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rvActiveNow"
+                android:layout_marginHorizontal="@dimen/margin_medium_10"
+                android:layout_marginTop="@dimen/margin_medium"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvGroupChatList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rvChatList"
+                android:layout_marginHorizontal="@dimen/margin_medium_10"
+                android:layout_marginTop="@dimen/margin_small"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

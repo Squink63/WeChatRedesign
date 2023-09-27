@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/margin_medium_2">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/ivProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="30dp"
+        android:layout_marginStart="@dimen/margin_small">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivUploaderImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/imag1"
+            android:scaleType="centerCrop"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvUploaderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_toEndOf="@id/ivProfile"
+        android:text="Michael"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_regular_2x_18"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvUploadTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/ivProfile"
+        android:text="15 min ago"
+        android:layout_below="@id/tvUploaderName"
+        android:layout_marginStart="@dimen/margin_medium"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/margin_xlarge"
+        android:layout_height="@dimen/margin_xlarge"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium"
+        app:srcCompat="@drawable/ic_baseline_more_horiz_24" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMomentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nice!"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_regular_2x_18"
+        android:layout_below="@id/ivProfile"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_medium" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpMomentImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMomentText"
+        android:layout_marginTop="@dimen/margin_medium"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/favorite_fill_full"
+        android:layout_below="@id/vpMomentImage"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_comment"
+        android:layout_toStartOf="@id/tvComment"
+        android:layout_below="@id/vpMomentImage"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/ivBookmark"
+        android:layout_below="@id/vpMomentImage"
+        android:text="3"
+        android:textColor="@color/colorAccent"
+        android:layout_marginTop="@dimen/margin_medium_12"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/margin_medium"
+        app:srcCompat="@drawable/bookmark_light"
+        android:layout_below="@id/vpMomentImage"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium_10"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:layout_below="@id/ivBookmark"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="@dimen/margin_medium_10"/>
+
+
+
+</RelativeLayout>

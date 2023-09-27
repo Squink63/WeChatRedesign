@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="90dp"
+    android:layout_height="@dimen/dimen_large_100"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnRemove"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/button_remove"
+        android:elevation="@dimen/margin_card_medium_2"
+        android:layout_gravity="end"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="80dp"
+        android:layout_height="93dp"
+        android:background="@color/ww"
+        android:layout_gravity="center">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/gcContactProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_medium"
+            app:cardCornerRadius="25dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivContactProfileImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/imag1"/>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Aung"
+            android:textSize="@dimen/text_smaller"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="@dimen/margin_card_medium_2"/>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>

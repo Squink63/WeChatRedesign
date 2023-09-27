@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CreateMomentActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icon_dismiss"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginStart="@dimen/margin_medium"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNewMoment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Moment"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:fontFamily="@font/we_chat_font"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_medium_3"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@color/colorAccent"
+        app:cardCornerRadius="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create"
+            android:textSize="@dimen/text_regular"
+            android:textColor="@color/white"
+            android:fontFamily="@font/we_chat_font"
+            android:padding="@dimen/margin_medium"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/ivProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="30dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_below="@+id/btnCancel"
+        android:layout_marginTop="@dimen/margin_xlarge">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivUploadUserImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/imag1"
+            android:scaleType="centerCrop"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvUploadUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium_12"
+        android:layout_marginTop="@dimen/margin_xxlarge"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_toEndOf="@id/ivProfile"
+        android:fontFamily="@font/we_chat_font"
+        android:text="Michael"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_regular_2x_18"
+        android:textStyle="bold"
+        android:layout_below="@+id/btnCancel"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtCreateMomentText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivProfile"
+        android:background="@android:color/transparent"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_medium_12"
+        android:hint="What's on your mind"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAddMomentImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_medium"/>
+
+
+</RelativeLayout>

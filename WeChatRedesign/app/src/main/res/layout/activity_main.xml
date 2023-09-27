@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/flContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+        </FrameLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="92dp"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/menu_bottom_navigation"
+            app:itemTextAppearanceActive="@style/TextStyleBottomNavigationActive"
+            app:itemTextAppearanceInactive="@style/TextStyleBottomNavigationInactive"
+            app:labelVisibilityMode="labeled"
+            android:paddingBottom="@dimen/margin_medium"
+            android:paddingTop="@dimen/margin_medium"
+            app:itemIconSize="38dp"/>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="110dp"
+    android:layout_height="110dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/backgroung_chat_list"
+    android:layout_marginStart="@dimen/margin_small">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/gcGroupProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin_medium_2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_medium">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivGroup"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/image2" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvGroupName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Smiles"
+        android:layout_below="@id/gcGroupProfile"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/text_regular_2x"
+        android:layout_marginTop="@dimen/margin_medium"/>
+
+</RelativeLayout>

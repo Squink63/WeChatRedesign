@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/margin_medium_2">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLabelName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtChangeName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_xxlarge"
+        android:layout_below="@id/tvLabelName"
+        android:text="Phyo zeyar"
+        android:fontFamily="@font/we_chat_font"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLabelPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number"
+        android:layout_below="@id/edtChangeName"
+        android:layout_marginTop="@dimen/margin_xlarge"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtChangePhone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_xxlarge"
+        android:layout_below="@id/tvLabelPhone"
+        android:text="09123456789"
+        android:fontFamily="@font/we_chat_font"
+        android:inputType="phone"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLabelDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtChangePhone"
+        android:text="Date of Birth"
+        android:layout_marginTop="@dimen/margin_xxlarge"/>
+
+    <Spinner
+        android:id="@+id/spDayEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLabelDate"
+        android:entries="@array/day"/>
+
+    <Spinner
+        android:id="@+id/spMonthEdit"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLabelDate"
+        android:entries="@array/month"
+        android:layout_toEndOf="@id/spDayEdit"/>
+
+    <Spinner
+        android:id="@+id/spYearEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLabelDate"
+        android:entries="@array/year"
+        android:layout_toEndOf="@id/spMonthEdit"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        android:layout_below="@id/spDayEdit"
+        android:layout_marginTop="@dimen/margin_xxlarge"/>
+
+    <RadioGroup
+        android:id="@+id/rgGenderEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/tvGender">
+
+        <RadioButton
+            android:id="@+id/rbMaleEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"/>
+
+        <RadioButton
+            android:id="@+id/rbFeMaleEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:layout_marginStart="@dimen/margin_medium"/>
+
+        <RadioButton
+            android:id="@+id/rbOtherEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other"
+            android:layout_marginStart="@dimen/margin_medium"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rgGenderEdit"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:strokeColor="@color/colorAccent"
+            app:backgroundTint="@color/white"
+            app:strokeWidth="1dp"
+            android:text="Cancel"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/we_chat_font"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:layout_weight="0.5"
+            android:layout_marginEnd="@dimen/margin_medium_3"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:strokeColor="@color/colorAccent"
+            app:strokeWidth="1dp"
+            android:text="Save"
+            android:fontFamily="@font/we_chat_font"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:layout_weight="0.5"/>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

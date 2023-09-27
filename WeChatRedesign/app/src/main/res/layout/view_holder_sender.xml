@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/llSenderMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background_solid"
+        android:padding="@dimen/margin_card_medium"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_medium">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSenderMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello, How are you?"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_regular_2x"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="end">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSenderMessageTimeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:30 AM"
+                android:textSize="@dimen/text_smaller"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_gravity="end"
+                android:textColor="@color/white"
+                android:paddingTop="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/icon_seen"
+                android:layout_gravity="end"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/margin_medium">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSenderImageMessage"
+            android:layout_width="@dimen/dimen_large_250"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/image2"
+            android:scaleType="centerCrop"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSenderMessageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:30 AM"
+            android:textSize="@dimen/text_smaller"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_gravity="end"/>
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

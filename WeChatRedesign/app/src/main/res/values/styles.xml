@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextStyleBottomNavigationActive">
+        <item name="android:fontFamily">@font/we_chat_font</item>
+        <item name="android:textSize">@dimen/text_regular_2x</item>
+    </style>
+
+    <style name="TextStyleBottomNavigationInactive">
+        <item name="android:fontFamily">@font/we_chat_font</item>
+        <item name="android:textColor">@color/colorIcon</item>
+        <item name="android:textSize">@dimen/text_regular_2x</item>
+    </style>
+
+</resources>

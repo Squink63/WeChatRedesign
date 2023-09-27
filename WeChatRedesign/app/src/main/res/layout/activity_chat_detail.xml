@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ChatDetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/margin_medium">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/back"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/margin_large"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/gcChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="30dp"
+                android:layout_toEndOf="@id/btnBack"
+                android:layout_marginStart="@dimen/margin_medium_2">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivChatProfile"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:srcCompat="@drawable/image2"
+                    android:scaleType="centerCrop"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvChatProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aung"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_regular_2x"
+                android:layout_toEndOf="@id/gcChat"
+                android:textColor="@color/colorAccent"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginStart="@dimen/margin_medium"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/margin_xlarge"
+                android:layout_height="@dimen/margin_xlarge"
+                app:srcCompat="@drawable/ic_baseline_more_vert_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_medium"/>
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_small"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMessage"
+                android:layout_width="match_parent"
+                android:layout_below="@id/tvToday"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_marginBottom="@dimen/margin_medium_2" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/rvMessage"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_2"/>
+
+        <LinearLayout
+            android:id="@+id/llEdtChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:weightSum="1"
+            android:layout_below="@id/rvImage">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtTypeMessage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_xxlarge"
+                android:background="@color/white"
+                android:hint="  Type a message..."
+                android:paddingStart="@dimen/margin_medium_2"
+                android:layout_weight="0.8"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnSendMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/fluent_mic_24_regular"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_below="@id/llEdtChat"
+            android:background="@color/ww"
+            android:paddingTop="@dimen/margin_medium"
+            android:paddingBottom="@dimen/margin_medium">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnGallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/icon_gallery"
+                android:layout_weight="0.2"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/icon_camera"
+                android:layout_weight="0.2"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnGif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/icon_gif"
+                android:layout_weight="0.2"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/icon_location"
+                android:layout_weight="0.2"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnMic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/icon_mic"
+                android:layout_weight="0.2"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

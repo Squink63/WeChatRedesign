@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">WeChatRedesign</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="lbl_enter_your_phone_number"><font size="13">Enter Your Phone Number</font></string>
+    <string name="lbl_enter_your_email"><font size="13">Enter Your Email</font></string>
+    <string name="lbl_enter_your_password"><font size="13">Enter Your Password</font></string>
+    <string name="lbl_bookmarked_moments"><u>Bookmarked Moments</u></string>
+</resources>

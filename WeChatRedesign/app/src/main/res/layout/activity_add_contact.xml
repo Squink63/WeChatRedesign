@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AddContactActivity"
+    android:background="@drawable/background_add_contact">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnBckTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/back"
+        app:tint="@color/black"
+        android:layout_margin="@dimen/margin_medium_2"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivTapScan"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/instruction_msg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_xxxlarge"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivFrame"
+        android:layout_width="@dimen/dimen_large_250"
+        android:layout_height="@dimen/dimen_large_250"
+        app:srcCompat="@drawable/scan"
+        android:layout_centerInParent="true"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnScan"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/button_scan"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

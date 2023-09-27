@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/gcImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="25dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivReceiverImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/imag1"
+            android:scaleType="centerCrop"/>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/llReceiveChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_background_solid"
+        android:padding="@dimen/margin_card_medium"
+        android:orientation="vertical"
+        android:layout_toEndOf="@id/gcImage"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_medium">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReceiverMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I am fine and You"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_regular_2x"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReceiverMessageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:30 AM"
+            android:textSize="@dimen/text_smaller"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llImageReceive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/margin_medium">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivReceiverImageMessage"
+            android:layout_width="@dimen/dimen_large_250"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/image2"
+            android:scaleType="centerCrop"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReceiverMessageTimeImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:30 AM"
+            android:textSize="@dimen/text_smaller"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_gravity="end"/>
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

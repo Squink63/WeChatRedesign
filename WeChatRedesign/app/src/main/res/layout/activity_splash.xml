@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SplashActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/logo"
+            android:layout_weight="0.8"
+            android:layout_gravity="center"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/ivText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Text your friends and share moments"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/we_chat_font"
+                android:textSize="@dimen/text_regular"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="End-to-end secured messaging app with Social Elements"
+                android:layout_below="@id/ivText"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/text_smaller"
+                android:textColor="@color/colorAccent"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tvText"
+                android:layout_marginTop="@dimen/margin_xxxlarge">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_button"
+                    android:text="Sign Up"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/we_chat_font"
+                    android:paddingHorizontal="42dp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnLoginSplash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background_solid"
+                    android:text="Login"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/we_chat_font"
+                    android:paddingHorizontal="45dp"
+                    android:layout_marginStart="@dimen/margin_medium_3"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

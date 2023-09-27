@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.GetOtpActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:layout_marginBottom="@dimen/margin_medium_2"
+            app:srcCompat="@drawable/back" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi !"
+            android:textSize="28sp"
+            android:layout_below="@id/btnBack"
+            android:layout_marginStart="@dimen/margin_large_28"
+            android:layout_marginTop="@dimen/margin_xxlarge"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/we_chat_font"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvContinue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvWelcome"
+            android:text="Create a new account"
+            android:textColor="@color/colorAccent"
+            android:layout_alignStart="@id/tvWelcome"
+            android:layout_marginTop="@dimen/margin_medium"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvContinue"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/image_body"
+            android:layout_marginTop="@dimen/margin_xlarge" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivLogo"
+            android:inputType="number"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:backgroundTint="@color/colorAccent"
+            android:layout_alignStart="@id/tvWelcome"
+            android:layout_toStartOf="@id/btnGetOtp"
+            android:hint="@string/lbl_enter_your_phone_number" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtPhoneNumber"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:backgroundTint="@color/colorAccent"
+            android:layout_alignStart="@id/tvWelcome"
+            android:layout_toStartOf="@id/btnGetOtp"
+            android:hint="@string/lbl_enter_your_email"
+            android:inputType="textEmailAddress"/>
+
+        <LinearLayout
+            android:id="@+id/llOTP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtEmail"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_xxlarge">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtOtp1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/backgroung_otp"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:maxLength="1"
+                android:inputType="number"
+                android:gravity="center"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtOtp2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/backgroung_otp"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:maxLength="1"
+                android:inputType="number"
+                android:gravity="center"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtOtp3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/backgroung_otp"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:maxLength="1"
+                android:inputType="number"
+                android:gravity="center"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtOtp4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/backgroung_otp"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:maxLength="1"
+                android:inputType="number"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGetOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:layout_below="@id/ivLogo"
+            android:background="@drawable/button_background_solid"
+            android:text="Get OTP"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:fontFamily="@font/we_chat_font" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReceive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't receive the OTP?"
+            android:textSize="@dimen/text_regular"
+            android:layout_below="@id/llOTP"
+            android:layout_alignStart="@id/llOTP"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginStart="@dimen/margin_xxlarge"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvResendCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tvReceive"
+            android:text="Resend Code"
+            android:textSize="@dimen/text_regular"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/margin_small"
+            android:textColor="@color/colorAccent"
+            android:layout_below="@id/llOTP"
+            android:layout_marginTop="@dimen/margin_medium_2"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnVerify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvResendCode"
+            android:layout_marginTop="@dimen/margin_xxxlarge"
+            android:layout_marginBottom="@dimen/margin_xlarge"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_background_solid"
+            android:text="Verify"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:fontFamily="@font/we_chat_font"
+            android:paddingHorizontal="45dp" />
+
+    </RelativeLayout>
+
+
+</ScrollView>

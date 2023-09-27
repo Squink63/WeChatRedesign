@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ProfileFragment"
+    android:background="@color/ww">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/margin_medium_2">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Me"
+                android:textSize="@dimen/text_heading_2x"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/we_chat_font"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="@color/colorAccent"
+                app:cardCornerRadius="@dimen/margin_medium_10">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnEditProfile"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/icon_subtract"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="@dimen/margin_medium_10"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <RelativeLayout
+            android:id="@+id/rlProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_solid"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:layout_marginHorizontal="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium_10"
+            android:padding="@dimen/margin_medium_10">
+
+            <FrameLayout
+                android:id="@+id/flProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="70dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivProfileImage"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        app:srcCompat="@drawable/imag1"
+                        android:scaleType="centerCrop"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnAddProfileImage"
+                    android:layout_width="@dimen/margin_xlarge"
+                    android:layout_height="@dimen/margin_xlarge"
+                    app:srcCompat="@drawable/icon_upload_profile"
+                    android:elevation="@dimen/margin_medium"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="@dimen/margin_medium"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivQRCode"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/qr_code_small"
+                    android:elevation="@dimen/margin_medium"
+                    android:layout_gravity="bottom|end"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="@dimen/margin_small"/>
+
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvProfileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phyo Zeyar"
+                android:textSize="@dimen/text_regular_3x"
+                android:textColor="@color/white"
+                android:fontFamily="@font/we_chat_font"
+                android:layout_toEndOf="@id/flProfile"
+                android:layout_marginStart="@dimen/margin_large"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvProfileName"
+                app:srcCompat="@drawable/icon_phone"
+                android:layout_alignStart="@id/tvProfileName"
+                android:layout_marginTop="@dimen/margin_medium_2"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivPhone"
+                app:srcCompat="@drawable/icon_date"
+                android:layout_alignStart="@id/tvProfileName"
+                android:layout_marginTop="@dimen/margin_medium_2"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDirection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivDate"
+                app:srcCompat="@drawable/icon_direction"
+                android:layout_alignStart="@id/tvProfileName"
+                android:layout_marginTop="@dimen/margin_medium_2"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="09123456789"
+                android:textColor="@color/white"
+                android:fontFamily="@font/we_chat_font"
+                android:layout_toEndOf="@id/ivPhone"
+                android:layout_alignBottom="@id/ivPhone"
+                android:layout_marginBottom="@dimen/margin_xsmall"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:textSize="@dimen/text_small"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBirthDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1988-06-05"
+                android:textColor="@color/white"
+                android:fontFamily="@font/we_chat_font"
+                android:layout_toEndOf="@id/ivDate"
+                android:layout_alignBottom="@id/ivDate"
+                android:layout_marginBottom="@dimen/margin_xsmall"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:textSize="@dimen/text_small"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvGenderEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textColor="@color/white"
+                android:fontFamily="@font/we_chat_font"
+                android:layout_toEndOf="@id/ivDirection"
+                android:layout_alignBottom="@id/ivDirection"
+                android:layout_marginBottom="@dimen/margin_xsmall"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:textSize="@dimen/text_small"/>
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBookmarkedMoment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlProfile"
+            android:text="@string/lbl_bookmarked_moments"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_regular_3x"
+            android:layout_margin="@dimen/margin_medium_2"
+            android:fontFamily="@font/we_chat_font"
+            android:textColor="@color/colorAccent"/>
+
+        <include
+            android:id="@+id/vpProfileBookmarkedMoment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/view_pod_moment"
+            android:layout_below="@id/tvBookmarkedMoment"
+            android:layout_margin="@dimen/margin_medium_2"/>
+
+
+    </RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
